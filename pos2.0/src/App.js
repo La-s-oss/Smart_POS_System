@@ -130,6 +130,7 @@ function AppProvider({ children }) {
     const total = subtotal + tax;
 
     const newTransaction = {
+      
       id: `TXN${Date.now()}`,
       transactionId: `TXN${new Date().toISOString().slice(0, 10).replace(/-/g, '')}${String(transactions.length + 1).padStart(4, '0')}`,
       date: new Date().toISOString(),
